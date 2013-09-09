@@ -3,7 +3,7 @@ export PATH="~/.bin:/usr/local/share/python:/usr/local/bin:/opt/local/bin:/Users
 # /Applications/xampp/xamppfiles/bin:
 
 bind "set show-all-if-ambiguous On"
-. ~/Library/shellScripts/django_bash_completion.sh
+. ~/my/dotfiles/etc/django_bash_completion.sh
 
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
@@ -97,10 +97,10 @@ _pip_completion()
 }
 complete -o default -F _pip_completion pip
 # pip bash completion end
-source ~/Library/shellScripts/git-completion.bash
-source ~/Library/shellScripts/git-flow-completion.bash
-source ~/Library/shellScripts/fab_complete.sh
-source ~/Library/shellScripts/ve.sh
+source ~/my/dotfiles/etc/git-completion.bash
+source ~/my/dotfiles/etc/git-flow-completion.bash
+source ~/my/dotfiles/etc/fab_complete.sh
+source ~/my/dotfiles/etc/ve.sh
 
 
 _fab_completion() {
