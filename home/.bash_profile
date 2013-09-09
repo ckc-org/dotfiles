@@ -2,14 +2,13 @@ source /opt/boxen/env.sh
 
 export EDITOR='subl -w'
 export PATH="~/.bin:/usr/local/share/python:/usr/local/bin:/opt/local/bin:/Users/skoczen/Library/shellScripts:/usr/local/sbin:.:/Developer/usr/bin:/Developer/usr/sbin:/opt/local/sbin:/opt/local/lib/postgresql84/bin:/android/sdk/platform-tools:/usr/local/ec2-api-tools/bin:/usr/local/share/npm/lib/node_modules/less/bin:/usr/local/share/npm/lib/node_modules:/usr/local/share/npm/lib/node_modules/karma/bin:/usr/local/opt/ruby/bin:${PATH}"
-# /Applications/xampp/xamppfiles/bin:
 
 bind "set show-all-if-ambiguous On"
 . ~/my/dotfiles/etc/django_bash_completion.sh
 
 export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
-source /usr/local/share/python/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_PYTHON=/opt/boxen/homebrew/bin/python
+source /opt/boxen/homebrew/share/python/virtualenvwrapper.sh
 
 # Terminal colours (after installing GNU coreutils)
 NM="\[\033[0;38m\]" #means no background and white lines
