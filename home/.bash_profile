@@ -1,4 +1,4 @@
-source /opt/boxen/env.sh
+source ~/.profile
 
 export EDITOR='subl -w'
 export PATH="~/.bin:/usr/local/share/python:/usr/local/bin:/opt/local/bin:/Users/skoczen/Library/shellScripts:/usr/local/sbin:.:/Developer/usr/bin:/Developer/usr/sbin:/opt/local/sbin:/opt/local/lib/postgresql84/bin:/android/sdk/platform-tools:/usr/local/ec2-api-tools/bin:/usr/local/share/npm/lib/node_modules/less/bin:/usr/local/share/npm/lib/node_modules:/usr/local/share/npm/lib/node_modules/karma/bin:/usr/local/opt/ruby/bin:${PATH}"
@@ -59,6 +59,7 @@ alias start_celery="python manage.py celeryd -v 2 -B -s /tmp/celery -E --concurr
 alias kill_pyc='find . -iname "*.pyc" -delete'
 alias kill_dstore='find . -iname ".DS_Store" -delete'
 alias gitbox='open -a /Applications/Gitbox.app .'
+alias update_boxen='cd /opt/boxen/repo;bundle exec librarian-puppet outdated;boxen
 
 #DIRECTORY ALIASES
 alias cdwork='cd ~/workingCopy/'
@@ -72,9 +73,6 @@ alias rs+='python manage.py runserver_plus'
 
 alias start_redis='/usr/local/Cellar/redis/2.2.12/bin/redis-server /usr/local/etc/redis.conf'
 alias start_redis2.4='/usr/local/Cellar/redis/2.4.0-rc6/bin/redis-server /usr/local/etc/redis.conf'
-alias start_mailman='sudo /usr/local/mailman/bin/mailmanctl -u -s start'
-alias stop_mailman='sudo /usr/local/mailman/bin/mailmanctl -u -s stop'
-alias sshrack='colorwrap.sh ssh root@184.106.1elscr51.144'
 alias copy_ssh='scp ~/.ssh/id_rsa.pub'
 alias checkout_live='git checkout live'
 alias checkout_master='git checkout master'
