@@ -27,7 +27,6 @@ export JAVA_HOME=`/usr/libexec/java_home`
 
 #SYSTEM ALIASES
 alias dir='ls'
-alias d='date'
 alias cls='clear'
 alias cd..='cd ..'
 alias kill='sudo kill -9'
