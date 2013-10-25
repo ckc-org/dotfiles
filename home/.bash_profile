@@ -60,7 +60,7 @@ alias start_celery="python manage.py celeryd -v 2 -B -s /tmp/celery -E --concurr
 alias kill_pyc='find . -iname "*.pyc" -delete'
 alias kill_dstore='find . -iname ".DS_Store" -delete'
 alias gitbox='open -a /Applications/Gitbox.app .'
-alias update_boxen='cd /opt/boxen/repo;bundle exec librarian-puppet outdated;boxen
+alias update_boxen='cd /opt/boxen/repo;bundle exec librarian-puppet outdated;boxen'
 
 #DIRECTORY ALIASES
 alias cdwork='cd ~/workingCopy/'
