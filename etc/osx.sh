@@ -96,7 +96,7 @@ defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\\U21a9"
 # ========
 
 # Use a modified version of the Pro theme by default in Terminal.app
-open "$pm/dotfiles/terminal/paulmillr.terminal"
+open "terminal/paulmillr.terminal"
 sleep 1 # Wait a bit to make sure the theme is loaded
 defaults write com.apple.terminal 'Default Window Settings' -string 'paulmillr'
 defaults write com.apple.terminal 'Startup Window Settings' -string 'paulmillr'
