@@ -24,6 +24,9 @@ export LC_ALL=en_US.UTF-8
 
 export JAVA_HOME=`/usr/libexec/java_home`
 
+# Setup max files
+launchctl limit maxfiles 1000000 unlimited
+
 
 #SYSTEM ALIASES
 alias dir='ls'
