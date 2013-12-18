@@ -1,5 +1,3 @@
-echo "Welcome to da shell mon!"
-
 source ~/.profile
 
 export EDITOR='subl -w'
@@ -7,7 +5,7 @@ export EDITOR='subl -w'
 bind "set show-all-if-ambiguous On"
 . ~/my/dotfiles/etc/django_bash_completion.sh
 
-export WORKON_HOME=$HOME/.virtualenvs
+export WORKON_HOME="/opt/boxen/data/virturalenvs"
 export VIRTUALENVWRAPPER_PYTHON=/opt/boxen/homebrew/bin/python
 source /opt/boxen/homebrew/share/python/virtualenvwrapper.sh
 
