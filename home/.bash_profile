@@ -40,6 +40,7 @@ alias l='ls'
 
 
 #PROGRAM ALIASES
+
 alias tm='mate $1'
 alias md='mkdir'
 alias fnd='sudo find . -name $1'
@@ -68,8 +69,8 @@ alias cdframeworks='cd /Library/Frameworks/Python.framework/Versions/Current/lib
 
 #DJANGO ALIASES
 alias syncdb='python manage.py syncdb'
-alias runserver='python manage.py runserver 0.0.0.0:8000'
 alias rsaquameta='python manage.py --settings=env.dev.settings runserver'
+alias rs='python manage.py runserver 0.0.0.0:8000'
 alias rs+='python manage.py runserver_plus'
 
 alias start_redis='/usr/local/Cellar/redis/2.2.12/bin/redis-server /usr/local/etc/redis.conf'
