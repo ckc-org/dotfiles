@@ -26,6 +26,9 @@ export JAVA_HOME=`/usr/libexec/java_home`
 # Setup max files
 launchctl limit maxfiles 1000000 16000
 
+# Android SDK
+export PATH=$PATH:/Android/tools
+
 
 #SYSTEM ALIASES
 alias dir='ls'
