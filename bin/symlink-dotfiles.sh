@@ -1,7 +1,6 @@
 #!/bin/bash
 
-dev="$HOME/Development"
-dotfiles="$dev/paulmillr/dotfiles"
+dotfiles="~/dotfiles"
 bin="/usr/local/bin"
 
 if [[ -d "$dotfiles" ]]; then
@@ -31,6 +30,6 @@ for location in bin/*; do
   link "$dotfiles/$location" "$bin/$file"
 done
 
-if [[ `uname` == 'Darwin' ]]; then
-  link "$dotfiles/sublime/Packages/User/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings"
-fi
+# if [[ `uname` == 'Darwin' ]]; then
+#   link "$dotfiles/sublime/Packages/User/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings"
+# fi
