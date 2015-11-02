@@ -16,8 +16,16 @@ function prompt_paulmillr_precmd {
   unsetopt XTRACE KSH_ARRAYS
 }
 
+platform="$(uname -s)"
 function list-files {
-  echo `script -q /dev/null ls -G . | tr -d '\r' | cat`
+  case "$platform" in
+     Darwin)
+       echo `script -q /dev/null ls -G . | tr -d '\r' | cat`
+       ;;
+     *)
+       ls .
+       ;;
+  esac
 }
 
 function get-vcs-info {
@@ -45,7 +53,8 @@ function prompt_paulmillr_setup {
 
   # zstyle ':omz:module:editor' completing '%B%F{red}...%f%b'
 
-  PROMPT='%F{yellow}%T %F{magenta}${SSH_TTY:+%n@%m }%F{cyan}%1~%f${vcs_info}\
+  # Time: %F{yellow}%T
+  PROMPT='%F{magenta}${SSH_TTY:+%n@%m }%F{cyan}%1~%f${vcs_info}\
 %(!.%B%F{red}#%f%b.%B %(?.%F{green}.%F{red})❯%f%b) '
   RPROMPT=''
   SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
