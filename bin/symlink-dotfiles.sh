@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dotfiles="~/dotfiles"
+dotfiles="~/my/dotfiles"
 bin="/usr/local/bin"
 
 if [[ -d "$dotfiles" ]]; then
