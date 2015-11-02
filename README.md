@@ -1,12 +1,6 @@
 # Dotfiles
 Colourful & robust OS X configuration files and utilities.
 
-Installation is done with simple command set (see “building system from scratch” for setup of new system):
-
-```
-curl --silent https://raw.github.com/paulmillr/dotfiles/master/install.sh | sh
-```
-
 ## Features
 
 ![](http://f.cl.ly/items/2j1l392D1i1K0n0e241b/Screen%20Shot%202013-08-11%20at%2014.53.05.png)
