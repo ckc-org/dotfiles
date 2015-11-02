@@ -35,6 +35,13 @@ export PATH=$PATH:/usr/local/opt/ruby/bin;
 # Java
 export PATH=$PATH:$JAVA_HOME/bin;
 
+# Postgres
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
+
+# Heroku toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+
 
 #SYSTEM ALIASES
 alias dir='ls'
@@ -160,11 +167,6 @@ PS1="$NM[ $HI\u $HII\h $SI\w$NM ] $IN$RED\$(parse_git_branch)$DEFAULT\n\$ "
 
 proml
 
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
-
 function title {
   printf "\033]0;%s\007" "$1"
 }
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
