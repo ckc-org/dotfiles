@@ -118,3 +118,51 @@ defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 defaults write org.m0k.transmission WarningDonate -bool false
 # Hide the legal disclaimer
 defaults write org.m0k.transmission WarningLegal -bool false
+
+# Memory management
+# =================
+# Disable swap file. OS X will crash if mem will exceed max mem.
+# sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.dynamic_pager.plist
+
+# Enable swap back.
+# sudo launchctl load -wF /System/Library/LaunchDaemons/com.apple.dynamic_pager.plist
+
+
+
+
+
+
+
+# Set scroll direction
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+# Use smooth scrolling
+defaults write NSGlobalDomain AppleScrollAnimationEnabled -bool true
+
+# Enable key repeat
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+# Set keyboard repeat rate
+defaults write -g InitialKeyRepeat -int 15 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 2  # normal minimum is 2 (30 ms)
+
+
+# Secondary click:
+# Possible values: OneButton, TwoButton, TwoButtonSwapped
+defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode -string TwoButton
+
+# Smart zoom enabled, double-tap with one finger (set to 0 to disable)
+defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseOneFingerDoubleTapGesture -int 1
+
+# Double-tap with two fingers to Mission Control (set to 0 to disable)
+defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseTwoFingerDoubleTapGesture -int 3
+
+# Two finger horizontal swipe
+# 0 = Swipe between pages with one finger
+# 1 = Swipe between pages
+# 2 = Swipe between full screen apps with two fingers, swipe between pages with one finger (Default Mode)
+defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseTwoFingerHorizSwipeGesture -int 2
+
+defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseVerticalScroll -int 1
+defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseMomentumScroll -int 1
+defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseHorizontalScroll -int 1

@@ -1,5 +1,3 @@
-source ~/.profile
-
 export EDITOR='sub'
 
 bind "set show-all-if-ambiguous On"
@@ -24,7 +22,7 @@ export LC_ALL=en_US.UTF-8
 export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/"
 
 # Setup max files
-launchctl limit maxfiles 1000000 16000
+sudo launchctl limit maxfiles 1000000 16000
 
 # Android SDK
 export PATH=$PATH:/Android/tools:/Android/platform-tools;
