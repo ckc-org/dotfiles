@@ -22,7 +22,7 @@ export LC_ALL=en_US.UTF-8
 export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/"
 
 # Setup max files
-sudo launchctl limit maxfiles 1000000 16000
+#launchctl limit maxfiles 1000000 16000
 
 # Android SDK
 export PATH=$PATH:/Android/tools:/Android/platform-tools;
