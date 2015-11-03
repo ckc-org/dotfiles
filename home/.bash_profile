@@ -1,4 +1,4 @@
-export EDITOR='sub'
+export EDITOR=subl
 
 bind "set show-all-if-ambiguous On"
 . ~/my/dotfiles/etc/django_bash_completion.sh
