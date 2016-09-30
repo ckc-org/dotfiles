@@ -40,7 +40,6 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
 export PATH="/usr/local/heroku/bin:$PATH"
 
 
-
 #SYSTEM ALIASES
 alias dir='ls'
 alias cls='clear'
@@ -76,6 +75,10 @@ alias kill_pyc='find . -iname "*.pyc" -delete'
 alias kill_dstore='find . -iname ".DS_Store" -delete'
 alias gitbox='open -a /Applications/Gitbox.app .'
 alias update_boxen='cd /opt/boxen/repo;bundle exec librarian-puppet outdated;boxen'
+alias pycharm='open -a /Applications/PyCharm.app/'
+
+#GIT ALIASES
+alias gitclean='git branch -d $(git branch --merged)'
 
 #DIRECTORY ALIASES
 alias cdwork='cd ~/workingCopy/'
@@ -86,6 +89,8 @@ alias syncdb='python manage.py syncdb'¡¡¡
 alias rsaquameta='python manage.py --settings=env.dev.settings runserver'
 alias rs='python manage.py runserver 0.0.0.0:8000'
 alias rs+='python manage.py runserver_plus'
+
+alias lr='python manage.py livereload'
 
 alias killpycs='find . -name "*.pyc" -delete'
 
@@ -168,3 +173,4 @@ proml
 function title {
   printf "\033]0;%s\007" "$1"
 }
+export PATH="/usr/local/sbin:$PATH"

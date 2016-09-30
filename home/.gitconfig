@@ -1,6 +1,6 @@
 [user]
-	name=Eric Carmichael
-	email=eric@ckcollab.com
+  name=Eric Carmichael
+  email=eric@ckcollab.com
 
 [github]
   user = ckcollab
@@ -36,14 +36,14 @@
   cleanup = !ruby "$HOME/Developer/paulmillr/dotfiles/git-extras/git-cleanup.rb"
 
 [push]
-  default = simple
+  default = current
 
 [color]
   ui = true
 
 [core]
   editor = subl
-  excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore_global
   #pager = diff-highlight | less -r
 
 [format]
