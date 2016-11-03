@@ -6,43 +6,17 @@
   user = ckcollab
 
 [alias]
-  br = branch
-  cb = "!sh -c 'git branch $1 && git ch $1' -"
-  ctb = "!sh -c 'git cb topics/$1' -"
+    track = "!git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`"
 
-  ci = commit
-  ch = checkout
-  fc = commit -am 'Initial commit.'
-  d = diff
-  st = status --short
-
-  graph = log --graph
-  last = log -n 10
-  url = !git remote -v|sed "'s|.*git[:@]\\(.*\\).git.*|http://\\1|;s|m:|m/|'"|uniq|xargs open
-  whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
-  discard = checkout -- .
-  rmtag = "!sh -c 'git tag -d $1; git push origin :refs/tags/$1'"
-
-  changelog = !sh "$HOME/Developer/paulmillr/dotfiles/git-extras/git-changelog.sh"
-  rstatus   = !zsh "$HOME/Developer/paulmillr/dotfiles/git-extras/git-rstatus.sh"
-  release   = !sh "$HOME/Developer/paulmillr/dotfiles/git-extras/git-release.sh"
-  setup     = !zsh "$HOME/Developer/paulmillr/dotfiles/git-extras/git-setup.sh"
-  summary   = !zsh "$HOME/Developer/paulmillr/dotfiles/git-extras/git-summary.sh"
-  delete-branch = !sh "$HOME/Developer/paulmillr/dotfiles/git-extras/git-delete-branch.sh"
-
-  pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1; } ; f"
-
-  ghfork = !sh "$HOME/Developer/paulmillr/dotfiles/git-extras/git-ghpull.sh"
-  cleanup = !ruby "$HOME/Developer/paulmillr/dotfiles/git-extras/git-cleanup.rb"
 
 [push]
-  default = current
+	default = current
 
 [color]
   ui = true
 
 [core]
-  editor = subl
+  editor = vim
   excludesfile = ~/.gitignore_global
   #pager = diff-highlight | less -r
 
