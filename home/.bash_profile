@@ -79,6 +79,7 @@ alias pycharm='open -a /Applications/PyCharm.app/'
 
 #GIT ALIASES
 alias gitclean='git branch -d $(git branch --merged)'
+# NOTE in .gitconfig we have `git track` which sets upstream branch!
 
 #DIRECTORY ALIASES
 alias cdwork='cd ~/workingCopy/'
@@ -108,8 +109,7 @@ alias sub='open $* -a /Applications/Sublime\ Text\ 2.app/'
 alias clearsvn='rm -r `find * -name "*.svn*"`'
 
 # FORTUNE COOKIES!
-# fortune | cowsay
-fortune
+fortune | cowsay
 
 # misc tab-completes
 # pip bash completion start
