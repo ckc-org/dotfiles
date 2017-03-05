@@ -1,7 +1,12 @@
 export EDITOR=subl
 
 bind "set show-all-if-ambiguous On"
+
 . ~/my/dotfiles/etc/django_bash_completion.sh
+. ~/my/dotfiles/etc/docker-compose
+. ~/my/dotfiles/etc/docker-machine
+. ~/my/dotfiles/etc/docker-machine-prompt
+. ~/my/dotfiles/etc/docker-machine-wrapper
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/src
@@ -19,7 +24,7 @@ export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/"
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # Setup max files
 #launchctl limit maxfiles 1000000 16000
