@@ -3,10 +3,12 @@ export EDITOR=subl
 bind "set show-all-if-ambiguous On"
 
 . ~/my/dotfiles/etc/django_bash_completion.sh
+. ~/my/dotfiles/etc/docker
 . ~/my/dotfiles/etc/docker-compose
 . ~/my/dotfiles/etc/docker-machine
 . ~/my/dotfiles/etc/docker-machine-prompt
 . ~/my/dotfiles/etc/docker-machine-wrapper
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/src
