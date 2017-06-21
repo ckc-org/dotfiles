@@ -82,7 +82,10 @@ alias kill_pyc='find . -iname "*.pyc" -delete'
 alias kill_dstore='find . -iname ".DS_Store" -delete'
 alias gitbox='open -a /Applications/Gitbox.app .'
 alias update_boxen='cd /opt/boxen/repo;bundle exec librarian-puppet outdated;boxen'
-alias pycharm='open -a /Applications/PyCharm.app/'
+
+# PyCharm
+export PYCHARM_DIR=$(find /Users/eric/Library/Application\ Support/JetBrains/Toolbox/apps/PyCharm-P -name "PyCharm.app")
+alias pycharm="open -a '$PYCHARM_DIR'"
 
 #GIT ALIASES
 alias gitclean='git branch -d $(git branch --merged)'
