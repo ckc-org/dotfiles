@@ -59,8 +59,7 @@ alias ls='ls -AGhl'
 alias l='ls'
 
 
-#PROGRAM ALIASES
-
+# PROGRAM ALIASES
 alias tm='mate $1'
 alias md='mkdir'
 alias fnd='sudo find . -name $1'
@@ -84,18 +83,18 @@ alias gitbox='open -a /Applications/Gitbox.app .'
 alias update_boxen='cd /opt/boxen/repo;bundle exec librarian-puppet outdated;boxen'
 
 # PyCharm
-export PYCHARM_DIR=$(find /Users/eric/Library/Application\ Support/JetBrains/Toolbox/apps/PyCharm-P -name "PyCharm.app")
-alias pycharm="open -a '$PYCHARM_DIR'"
+export PYCHARM_PATH=$(find /Users/eric/Library/Application\ Support/JetBrains/Toolbox/apps/PyCharm-P -name "PyCharm.app")
+alias pycharm='open -a "$PYCHARM_PATH"'
 
-#GIT ALIASES
+# GIT ALIASES
 alias gitclean='git branch -d $(git branch --merged)'
 # NOTE in .gitconfig we have `git track` which sets upstream branch!
 
-#DIRECTORY ALIASES
+# DIRECTORY ALIASES
 alias cdwork='cd ~/workingCopy/'
 alias cdframeworks='cd /Library/Frameworks/Python.framework/Versions/Current/lib/python2.5/site-packages/'
 
-#DJANGO ALIASES
+# DJANGO ALIASES
 alias syncdb='python manage.py syncdb'¡¡¡
 alias rsaquameta='python manage.py --settings=env.dev.settings runserver'
 alias rs='python manage.py runserver 0.0.0.0:8000'
