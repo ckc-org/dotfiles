@@ -3,12 +3,6 @@ Colourful & robust OS X configuration files and utilities.
 
 ## Features
 
-![](https://cloud.githubusercontent.com/assets/574696/3210643/80f11554-eed7-11e3-8c8f-5509bc304fc7.png)
-
-![](https://cloud.githubusercontent.com/assets/574696/3210642/7ecc9a00-eed7-11e3-9357-27c2a8576f80.png)
-
-Shell (zsh):
-
 * **NO DEPENDENCIES!**
 * Auto-completion
 * Syntax highlighting
@@ -41,7 +35,6 @@ Shell (zsh):
 * `etc` — various stuff like osx text substitutions / hosts backup
 * `git-extras` — useful git functions, defined in `home/gitconfig`
 * `home` — files that are symlinked to `$HOME` directory
-* `sublime` — sublime text 2 theme & settings
 * `terminal` — terminal theme & prompt
 
 ## Building system from scratch (reminder)
@@ -49,12 +42,10 @@ Shell (zsh):
 * Install "Source Code Pro" font.
 * Install XCode & its Command Line Tools.
 * Change Terminal.app theme to `terminal/paulmillr.terminal`.
-* Change default shell to ZSH: `chsh -s /bin/zsh`.
 * Insert proper hosts from `etc/hosts` to system’s `/etc/hosts`.
 * Create `~/Development/`
 * Clone this project (dotfiles **RECURSIVELY** `--recursive`) and run `sh bootstrap-new-system.sh`
-* Download the Yosemite style [Sublime Text icon](https://dribbble.com/shots/1840393-Sublime-Text-Yosemite-Icon?list=searches&tag=sublime_text) (instructions on usage are included in download)
-* Install Sublime packages with Package Control: "Seti UI"
+
 
 ## License
 
