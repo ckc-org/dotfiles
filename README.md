@@ -1,6 +1,8 @@
 # Dotfiles
 Colourful & robust OS X configuration files and utilities.
 
+(edited for Eric Carmichael)
+
 ## Features
 
 * **NO DEPENDENCIES!**
