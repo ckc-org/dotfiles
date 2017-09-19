@@ -83,7 +83,7 @@ alias gitbox='open -a /Applications/Gitbox.app .'
 alias update_boxen='cd /opt/boxen/repo;bundle exec librarian-puppet outdated;boxen'
 
 # PyCharm
-export PYCHARM_PATH=$(find /Users/eric/Library/Application\ Support/JetBrains/Toolbox/apps/PyCharm-P -name "PyCharm.app")
+export PYCHARM_PATH=$(find /Users/eric/Library/Application\ Support/JetBrains/Toolbox/apps/PyCharm-P -name "PyCharm.app" | tail -1)
 alias pycharm='open -a "$PYCHARM_PATH"'
 
 # GIT ALIASES
