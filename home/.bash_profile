@@ -81,6 +81,7 @@ alias kill_pyc='find . -iname "*.pyc" -delete'
 alias kill_dstore='find . -iname ".DS_Store" -delete'
 alias gitbox='open -a /Applications/Gitbox.app .'
 alias update_boxen='cd /opt/boxen/repo;bundle exec librarian-puppet outdated;boxen'
+alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 
 # PyCharm
 export PYCHARM_PATH=$(find /Users/eric/Library/Application\ Support/JetBrains/Toolbox/apps/PyCharm-P -name "PyCharm.app" | tail -1)
