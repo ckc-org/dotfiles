@@ -18,7 +18,9 @@
 [core]
   editor = vim
   excludesfile = ~/.gitignore_global
-  #pager = diff-highlight | less -r
+  # Nicer git diffs
+  #pager = /usr/share/git/diff-highlight/diff-highlight | less -rx1,5
+  pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
 
 [format]
   pretty = %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset

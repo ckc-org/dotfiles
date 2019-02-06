@@ -1,3 +1,6 @@
+# direnv
+.envrc
+
 # Numerous always-ignore extensions
 *.diff
 *.err
@@ -15,7 +18,7 @@
 
 # Node.js package manager
 /bower_components
-/node_modules
+node_modules
 /npm-debug.log
 
 # Other stuff

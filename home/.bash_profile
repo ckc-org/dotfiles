@@ -1,5 +1,8 @@
 export EDITOR=subl
 
+# Setup direnv hooks
+eval "$(direnv hook bash)"
+
 bind "set show-all-if-ambiguous On"
 
 . ~/my/dotfiles/etc/django_bash_completion.sh
@@ -82,6 +85,10 @@ alias kill_dstore='find . -iname ".DS_Store" -delete'
 alias gitbox='open -a /Applications/Gitbox.app .'
 alias update_boxen='cd /opt/boxen/repo;bundle exec librarian-puppet outdated;boxen'
 alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
+alias ipython='echo "Use ipy instead!"'
+
+# Python alias
+alias python=python3
 
 # PyCharm
 export PYCHARM_PATH=$(find /Users/eric/Library/Application\ Support/JetBrains/Toolbox/apps/PyCharm-P -name "PyCharm.app" | tail -1)
@@ -184,3 +191,11 @@ function title {
   printf "\033]0;%s\007" "$1"
 }
 export PATH="/usr/local/sbin:$PATH"
+
+# Google cloud sdk
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/eric/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/Users/eric/Downloads/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/eric/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/eric/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
