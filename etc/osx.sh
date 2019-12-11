@@ -14,6 +14,9 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
+# Download newly available updates in background
+defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
+
 # Screen
 # ======
 
@@ -21,11 +24,26 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-# Save screenshots to the downlaods.
+# Save screenshots to the downloads.
 defaults write com.apple.screencapture location "$HOME/Downloads/"
+
+# Disable shadow in screenshots
+#defaults write com.apple.screencapture disable-shadow -bool true
+
+# Enable subpixel font rendering on non-Apple LCDs
+# Reference: https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
+defaults write NSGlobalDomain AppleFontSmoothing -int 1
+
+# Enable HiDPI display modes (requires restart)
+sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
+
 
 # Sound
 # =====
+
+# Increase sound quality for Bluetooth headphones/headsets
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+
 
 # Disable the sound effects on boot
 # sudo nvram SystemAudioVolume=0
@@ -45,6 +63,10 @@ defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 # Disable auto-correct
 # defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Stop iTunes from responding to the keyboard media keys
+#launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+
+
 ###############################################################################
 # SSD-specific tweaks                                                         #
 ###############################################################################
@@ -55,7 +77,10 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 # Disable local Time Machine snapshots
 sudo tmutil disablelocal
 
-# Disable hibernation (speeds up entering sleep mode)
+# Hibernation mode
+# 0: Disable hibernation (speeds up entering sleep mode)
+# 3: Copy RAM to disk so the system state can still be restored in case of a
+#    power failure.
 sudo pmset -a hibernatemode 0
 
 # Remove the sleep image file to save disk space

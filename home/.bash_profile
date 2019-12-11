@@ -24,6 +24,11 @@ HII="\[\033[0;31m\]" #change this for letter colors
 SI="\[\033[0;33m\]" #this is for the current directory
 IN="\[\033[0m\]"
 
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+export TERM="xterm-color"
+
+
 export PS1="$NM[ $HI\u $HII\h $SI\w$NM ] $IN"
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
@@ -198,4 +203,9 @@ if [ -f '/Users/eric/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/eric/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/eric/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
+# NVM stuff
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
