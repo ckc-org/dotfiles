@@ -46,7 +46,7 @@ echo 'Enter new hostname of the machine (e.g. macbook-paulmillr)'
 # fi
 
 echo 'Symlinking config files...'
-  source 'bin/symlink-dotfiles.sh'
+  source './symlink-dotfiles.sh'
 
 # echo 'Applying sublime config...'
 #   st=$(pwd)/sublime/packages
