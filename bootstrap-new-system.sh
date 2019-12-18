@@ -25,25 +25,19 @@ echo 'Enter new hostname of the machine (e.g. macbook-paulmillr)'
 #   [[ -f $pub ]] && cat $pub | pbcopy
 #   open 'https://github.com/account/ssh'
 
-# # If we on OS X, install homebrew and tweak system a bit.
-# if [[ `uname` == 'Darwin' ]]; then
-#   which -s brew
-#   if [[ $? != 0 ]]; then
-#     echo 'Installing Homebrew...'
-#       ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-#       brew update
-#       brew install htop node ruby fortune
-#   fi
+ # If we on OS X, install homebrew and tweak system a bit.
+ if [[ `uname` == 'Darwin' ]]; then
+   which -s brew
+   if [[ $? != 0 ]]; then
+     echo 'Installing Homebrew...'
+       ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+       brew update
+       brew install htop ruby fortune cowsay lolcat
+   fi
 
-#   echo 'Tweaking OS X...'
-#     source 'etc/osx.sh'
-
-#   # http://github.com/sindresorhus/quick-look-plugins
-#   echo 'Installing Quick Look plugins...'
-#     brew tap phinze/homebrew-cask
-#     brew install caskroom/cask/brew-cask
-#     brew cask install suspicious-package quicklook-json qlmarkdown qlstephen qlcolorcode
-# fi
+   echo 'Tweaking OS X...'
+     source 'etc/osx.sh'
+ fi
 
 echo 'Symlinking config files...'
   source './symlink-dotfiles.sh'

@@ -45,7 +45,7 @@ Colourful & robust OS X configuration files and utilities.
 * Install XCode & its Command Line Tools.
 * Change Terminal.app theme to `terminal/paulmillr.terminal`.
 * Insert proper hosts from `etc/hosts` to system’s `/etc/hosts`.
-* Create `~/Development/`
+* Create `~/src/`
 * Clone this project (dotfiles **RECURSIVELY** `--recursive`) and run `sh bootstrap-new-system.sh`
 
 

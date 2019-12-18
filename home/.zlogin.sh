@@ -2,6 +2,9 @@
 # Executes commands at login post-zshrc.
 #
 
+# Hide "Last login: Wed Dec 18 01:16:13 on ttys009" message
+clear
+
 # Execute code that does not affect the current session in the background.
 {
   # Compile the completion dump to increase startup speed.
@@ -20,10 +23,15 @@
 
 # Print a random, hopefully interesting, adage.
 if (( $+commands[fortune] )); then
-  fortune -a
+  # Get a random cow
+  cowlist=( $(cowsay -l | sed "1 d") );
+  thechosencow=${cowlist[$(($RANDOM % ${#cowlist[*]}))]}
+
+  # Say something with that cow, in fancy colors
+  fortune | cowsay -f "$thechosencow" | lolcat
+
   print
 fi
 
-
-### Added by the Heroku Toolbelt
+# Heroku
 export PATH="/usr/local/heroku/bin:$PATH"

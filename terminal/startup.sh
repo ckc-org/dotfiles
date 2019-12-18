@@ -100,8 +100,6 @@ if zstyle -t ':prezto:environment:termcap' color; then
 fi
 
 
-
-
 #
 # Sets history options and defines history aliases.
 #

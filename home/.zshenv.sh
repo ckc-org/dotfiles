@@ -50,12 +50,11 @@ typeset -gU cdpath fpath mailpath manpath path
 typeset -gUT INFOPATH infopath
 
 # Commonly used directories.
-dev="$HOME/Developer"
-br="$dev/brunch"
-ch="$dev/chaplinjs"
-com="$dev/com"
-pm="$dev/paulmillr"
-as="$HOME/Library/Application Support"
+dev="$HOME/src"
+dotfiles="$HOME/my/dotfiles"
+#com="$dev/com"
+#pm="$dev/paulmillr"
+#as="$HOME/Library/Application Support"
 
 # Set the the list of directories that cd searches.
 cdpath=(
