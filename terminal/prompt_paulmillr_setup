@@ -56,12 +56,12 @@ function prompt_paulmillr_setup {
   # zstyle ':omz:module:editor' completing '%B%F{red}...%f%b'
 
   # Time: %F{yellow}%T
-  NEWLINE=$'\n'
-  PREFIX='%(?.%F{green}.%F{red})❯%f%b)'
+  PS_NEWLINE=$'\n'
+  PS_PREFIX='%(?.%F{green}.%F{red})❯%f%b)'
   # Put a bee on it, in memory of Francis :)
-  #PREFIX='🐝'
+  #PS_PREFIX='🐝'
   PROMPT='%F{magenta}${SSH_TTY:+%n@%m }%F{cyan}%~%f${vcs_info}\
-%(!.%B%F{red}#%f%b.%B ${NEWLINE}${PREFIX} '
+%(!.%B%F{red}#%f%b.%B ${PS_NEWLINE}${PS_PREFIX} '
 
   RPROMPT=''
   SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '

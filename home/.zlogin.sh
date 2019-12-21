@@ -32,6 +32,3 @@ if (( $+commands[fortune] )); then
 
   print
 fi
-
-# Heroku
-export PATH="/usr/local/heroku/bin:$PATH"

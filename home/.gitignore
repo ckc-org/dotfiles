@@ -27,5 +27,8 @@ node_modules
 
 # Project stuff
 
-# Personal config
-ecarmichael.py
+
+
+# Pycharm
+.idea/
+
