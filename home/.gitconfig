@@ -17,7 +17,7 @@
 
 [core]
   editor = vim
-  excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore
   # Nicer git diffs
   #pager = /usr/share/git/diff-highlight/diff-highlight | less -rx1,5
   pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
