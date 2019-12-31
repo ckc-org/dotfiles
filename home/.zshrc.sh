@@ -22,7 +22,6 @@ python_bin='/Users/eric/Library/Python/3.7/bin'
 path+=$python_bin
 
 # Heroku
-#export PATH="/usr/local/heroku/bin:$PATH"
 path+=('/usr/local/heroku/bin')
 
 # Virtualenvwrapper
@@ -41,6 +40,8 @@ export NVM_DIR="$HOME/.nvm"
 # To get the latest node LTS and use it by default:
 #   nvm install --lts && nvm use --lts && nvm alias default node
 
+# Postgres 11 install helper, not necessary on latest `brew install postres`
+path+=('/usr/local/opt/postgresql@11/bin')
 
 # Set global git ignore up
 git config --global core.excludesfile '~/.gitignore'
