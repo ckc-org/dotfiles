@@ -3,10 +3,18 @@
 # Load main files.
 # echo "Load start\t" $(gdate "+%s-%N")
 source "$dotfiles/terminal/startup.sh"
-# echo "$dotfiles/terminal/startup.sh"
 source "$dotfiles/terminal/completion.sh"
 source "$dotfiles/terminal/highlight.sh"
 # echo "Load end\t" $(gdate "+%s-%N")
+
+# Load local completion files
+for file in $dotfiles/etc/completion/* ; do
+  #echo "looking at $file"
+  if [ -f "$file" ] ; then
+    . "$file"
+    #echo "loading $file"
+  fi
+done
 
 autoload -U colors && colors
 
@@ -23,6 +31,9 @@ path+=$python_bin
 
 # Heroku
 path+=('/usr/local/heroku/bin')
+
+# Ruby (installed from `brew install ruby`)
+path+=('/usr/local/opt/ruby/bin')
 
 # Virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs

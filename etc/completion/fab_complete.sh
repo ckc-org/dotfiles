@@ -13,4 +13,4 @@ _fab_completion() {
     COMPREPLY=( $(compgen -W "${tasks}" -- ${cur}) )
 }
 
-complete -F _fab_completion fab
+compdef _fab_completion fab;
