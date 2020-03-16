@@ -6,8 +6,8 @@
   user = ckcollab
 
 [alias]
-    track = "!git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`"
-
+  track = "!git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`"
+  code-changes = "!git log --format=format: --name-only | egrep -v '^$' | sort | uniq -c | sort -rg | head -10"
 
 [push]
 	default = current

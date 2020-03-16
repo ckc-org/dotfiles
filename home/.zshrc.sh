@@ -29,11 +29,16 @@ prompt 'paulmillr'
 python_bin='/Users/eric/Library/Python/3.7/bin'
 path+=$python_bin
 
+# Python OpenSSL cert
+CERT_PATH=$(python3 -m certifi)
+SSL_CERT_FILE=${CERT_PATH}
+REQUESTS_CA_BUNDLE=${CERT_PATH}
+
 # Heroku
 path+=('/usr/local/heroku/bin')
 
 # Ruby (installed from `brew install ruby`)
-path+=('/usr/local/opt/ruby/bin')
+export PATH=/usr/local/opt/ruby/bin:$PATH;
 
 # Virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
@@ -75,3 +80,5 @@ alias ls='ls -AGhl'
 function ff() {
   find . -iname "*${1:-}*"
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

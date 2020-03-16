@@ -32,7 +32,10 @@ echo 'Enter new hostname of the machine (e.g. macbook-paulmillr)'
      echo 'Installing Homebrew...'
        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
        brew update
-       brew install htop ruby fortune cowsay lolcat
+       brew install htop ruby fortune cowsay lolcat fzf
+
+       # install fuzzyfind
+       /usr/local/opt/fzf/install
    fi
 
    echo 'Tweaking OS X...'
