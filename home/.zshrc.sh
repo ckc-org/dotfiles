@@ -70,6 +70,7 @@ export PATH
 # ==================================================================
 alias killpycs='find . -name "*.pyc" -delete'
 alias ls='ls -AGhl'
+alias pycharm='open -na "PyCharm.app" --args'
 
 
 # ==================================================================

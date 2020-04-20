@@ -8,6 +8,7 @@
 [alias]
   track = "!git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`"
   code-changes = "!git log --format=format: --name-only | egrep -v '^$' | sort | uniq -c | sort -rg | head -10"
+  lgb = "!git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches"
 
 [push]
 	default = current
