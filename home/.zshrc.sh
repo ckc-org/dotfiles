@@ -46,6 +46,13 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export VIRTUALENVWRAPPER_VIRTUALENV=$python_bin'/virtualenv'
 source $python_bin'/virtualenvwrapper.sh'
 
+# Android/react native dev
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 # Node Version Manager (nvm)
 mkdir -p ~/.nvm
 export NVM_DIR="$HOME/.nvm"
@@ -70,7 +77,7 @@ export PATH
 # ==================================================================
 alias killpycs='find . -name "*.pyc" -delete'
 alias ls='ls -AGhl'
-alias pycharm='open -na "PyCharm.app" --args'
+alias pycharm='open -na "PyCharm.app" --args "$@"'
 
 
 # ==================================================================
