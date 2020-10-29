@@ -23,10 +23,8 @@ fpath=("$dotfiles/terminal" $fpath)
 autoload -Uz promptinit && promptinit
 prompt 'paulmillr'
 
-
-
 # Python
-python_bin='/Users/eric/Library/Python/3.7/bin'
+python_bin='/Library/Frameworks/Python.framework/Versions/3.8/bin/'
 path+=$python_bin
 
 # Python OpenSSL cert
@@ -42,7 +40,7 @@ export PATH=/usr/local/opt/ruby/bin:$PATH;
 
 # Virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_PYTHON=/Library/Frameworks/Python.framework/Versions/3.8/bin/python3
 export VIRTUALENVWRAPPER_VIRTUALENV=$python_bin'/virtualenv'
 source $python_bin'/virtualenvwrapper.sh'
 
@@ -72,13 +70,17 @@ git config --global core.excludesfile '~/.gitignore'
 # After modifications, export path for other people to use
 export PATH
 
+# Don't share history between terminal tabs
+unsetopt inc_append_history
+unsetopt share_history
+
 # ==================================================================
 # = Aliases =
 # ==================================================================
 alias killpycs='find . -name "*.pyc" -delete'
 alias ls='ls -AGhl'
 alias pycharm='open -na "PyCharm.app" --args "$@"'
-
+alias dstop='docker stop $(docker ps -qa)'
 
 # ==================================================================
 # = Functions =
