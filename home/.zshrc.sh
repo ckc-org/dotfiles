@@ -81,6 +81,7 @@ alias killpycs='find . -name "*.pyc" -delete'
 alias ls='ls -AGhl'
 alias pycharm='open -na "PyCharm.app" --args "$@"'
 alias dstop='docker stop $(docker ps -qa)'
+alias dstart='docker-compose up -d'
 
 # ==================================================================
 # = Functions =
