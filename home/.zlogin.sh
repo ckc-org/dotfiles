@@ -31,7 +31,7 @@ if (( $+commands[fortune] )); then
 #  fortune | cowsay -f "$thechosencow" | lolcat
 
   # Use custom ckc cow
-  thechosencow=$(for n in ~/my/dotfiles/etc/cows/*; do printf '%s\n' "$n"; done | shuf -n 1)
+  thechosencow=$(for n in ~/src/dotfiles/etc/cows/*; do printf '%s\n' "$n"; done | shuf -n 1)
   fortune | cowsay -f $thechosencow | lolcat
 
   print
