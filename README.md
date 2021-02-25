@@ -46,7 +46,14 @@ Colourful & robust OS X configuration files and utilities.
 * Change Terminal.app theme to `terminal/paulmillr.terminal`.
 * Insert proper hosts from `etc/hosts` to system’s `/etc/hosts`.
 * Create `~/src/`
-* Clone this project (dotfiles **RECURSIVELY** `--recursive`) and run `sh bootstrap-new-system.sh`
+* Clone this project into the src directory (dotfiles **RECURSIVELY** `--recursive`) and run `sh bootstrap-new-system.sh`
+
+## Custom Cows
+
+* generate some cool ascii art ([there are plenty of sites available](https://asciiart.club/))
+* create a new file in etc/cows following this naming convention local_<your_cow_name>.cow
+* the contents of your file should follow the basic format of the existing cows
+
 
 
 ## License
