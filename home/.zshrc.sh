@@ -86,6 +86,15 @@ alias dstart='docker-compose up -d'
 # ==================================================================
 # = Functions =
 # ==================================================================
+# Github helpers, make a new PR with: gpu && pr (by @gibsonbailey)
+gpu () {
+    echo "git push -u origin $(git branch --show-current)"
+    git push -u origin $(git branch --show-current)
+}
+pr () {
+    URL=$(echo "$(git remote -v)\n$(git branch --show-current)" | p -c "import sys; lines = sys.stdin.readlines(); print(f\"https://github.com/{lines[-2].split('github.com:')[-1].split('.git')[0]}/pull/new/{lines[-1].strip()}\");");
+    open $URL
+}
 
 # Better find(1)
 function ff() {
