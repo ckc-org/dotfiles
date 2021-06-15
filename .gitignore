@@ -2,3 +2,4 @@
 *.pyc
 /Textmate/TextMate.pid
 .idea/*
+etc/cows/local_*.cow

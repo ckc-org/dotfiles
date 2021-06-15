@@ -51,7 +51,7 @@ typeset -gUT INFOPATH infopath
 
 # Commonly used directories.
 dev="$HOME/src"
-dotfiles="$HOME/my/dotfiles"
+dotfiles="$HOME/src/dotfiles"
 #com="$dev/com"
 #pm="$dev/paulmillr"
 #as="$HOME/Library/Application Support"
