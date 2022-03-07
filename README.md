@@ -41,9 +41,8 @@ Colourful & robust OS X configuration files and utilities.
 
 ## Building system from scratch (reminder)
 
-* Install "Source Code Pro" font.
 * Install XCode & its Command Line Tools.
-* Change Terminal.app theme to `terminal/paulmillr.terminal`.
+* Change Terminal.app theme to `terminal/paulmillr.terminal`. a copy of this file can be found in `dotfiles/terminal/paulmillr.terminal`
 * Insert proper hosts from `etc/hosts` to system’s `/etc/hosts`.
 * Create `~/src/`
 * Clone this project into the src directory (dotfiles **RECURSIVELY** `--recursive`) and run `sh bootstrap-new-system.sh`
