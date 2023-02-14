@@ -2,14 +2,14 @@
 ## install
 
 1. install XCode & its Command Line Tools.
-2. Change `Terminal.app` theme to `terminal/paulmillr.terminal`
-3. Run these commands:
+1. Run these commands:
     ```bash
     $ mkdir -p ~/src
     $ git clone git@github.com:ckc-org/dotfiles.git --recursive
     $ cd dotfiles 
     $ sh bootstrap-new-system.sh
     ```
+2. Change `Terminal.app` theme to `terminal/paulmillr.terminal`
 
 ## custom cows
 
