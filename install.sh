@@ -30,7 +30,7 @@ echo 'Enter new hostname of the machine (e.g. macbook-paulmillr)'
    which -s brew
    if [[ $? != 0 ]]; then
      echo 'Installing Homebrew...'
-       /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+       /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
        brew update
        brew install htop ruby fortune cowsay lolcat fzf coreutils
 
