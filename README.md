@@ -1,7 +1,6 @@
 
 ## install
 
-1. install XCode & its Command Line Tools.
 1. Run these commands:
     ```bash
     $ mkdir -p ~/src && cd ~/src
