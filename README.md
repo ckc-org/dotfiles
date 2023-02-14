@@ -4,7 +4,7 @@
 1. install XCode & its Command Line Tools.
 1. Run these commands:
     ```bash
-    $ mkdir -p ~/src
+    $ mkdir -p ~/src && cd ~/src
     $ git clone https://github.com/ckc-org/dotfiles.git --recursive
     $ cd dotfiles 
     $ sh bootstrap-new-system.sh
