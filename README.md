@@ -7,7 +7,7 @@
     $ mkdir -p ~/src && cd ~/src
     $ git clone https://github.com/ckc-org/dotfiles.git --recursive
     $ cd dotfiles 
-    $ sh bootstrap-new-system.sh
+    $ ./install.sh
     ```
 2. Change `Terminal.app` theme to `terminal/paulmillr.terminal`
 
