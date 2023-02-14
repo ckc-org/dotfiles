@@ -5,7 +5,7 @@
 1. Run these commands:
     ```bash
     $ mkdir -p ~/src
-    $ git clone git@github.com:ckc-org/dotfiles.git --recursive
+    $ git clone https://github.com/ckc-org/dotfiles.git --recursive
     $ cd dotfiles 
     $ sh bootstrap-new-system.sh
     ```
