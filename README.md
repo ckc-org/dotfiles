@@ -1,27 +1,17 @@
-# Dotfiles
-Colourful & robust OS X configuration files and utilities.
 
-## Features
+## install
 
-* **NO DEPENDENCIES!**
-* Auto-completion
-* Syntax highlighting
+1. install XCode & its Command Line Tools.
+2. Change `Terminal.app` theme to `terminal/paulmillr.terminal`
+3. Run these commands:
+    ```bash
+    $ mkdir -p ~/src
+    $ git clone git@github.com:ckc-org/dotfiles.git --recursive
+    $ cd dotfiles 
+    $ sh bootstrap-new-system.sh
+    ```
 
-## Structure
-* `bin` — files that are symlinked to any directory with binaries in `$PATH`
-* `etc` — various stuff like osx text substitutions / hosts backup
-* `git-extras` — useful git functions, defined in `home/gitconfig`
-* `home` — files that are symlinked to `$HOME` directory
-* `terminal` — terminal theme & prompt
-
-## Building system from scratch (reminder)
-
-* Install XCode & its Command Line Tools.
-* Change Terminal.app theme to `terminal/paulmillr.terminal`. a copy of this file can be found in `dotfiles/terminal/paulmillr.terminal`
-* Create `~/src/`
-* Clone this project into the src directory (dotfiles **RECURSIVELY** `--recursive`) and run `sh bootstrap-new-system.sh`
-
-## Custom Cows
+## custom cows
 
 * generate some cool ascii art ([there are plenty of sites available](https://asciiart.club/))
 * create a new file in etc/cows following this naming convention `local_<your_cow_name>.cow`
