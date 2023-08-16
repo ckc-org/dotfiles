@@ -5,13 +5,16 @@
 # Hide "Last login: Wed Dec 18 01:16:13 on ttys009" message
 clear
 
+dotfiles="$HOME/src/dotfiles"
+
 # Execute code that does not affect the current session in the background.
 {
   # Compile the completion dump to increase startup speed.
   zcompdump="${ZDOTDIR:-$HOME}/.zcompdump"
-  if [[ "$zcompdump" -nt "${zcompdump}.zwc" || ! -s "${zcompdump}.zwc" ]]; then
-    zcompile "$zcompdump"
+  if [[ -f "$zcompdump" && ( "$zcompdump" -nt "${zcompdump}.zwc" || ! -s "${zcompdump}.zwc" ) ]]; then
+      zcompile "$zcompdump"
   fi
+
 
   # Set environment variables for launchd processes.
   if [[ "$OSTYPE" == darwin* ]]; then
@@ -31,7 +34,7 @@ if (( $+commands[fortune] )); then
 #  fortune | cowsay -f "$thechosencow" | lolcat
 
   # Use custom ckc cow
-  thechosencow=$(for n in ~/src/dotfiles/etc/cows/*; do printf '%s\n' "$n"; done | shuf -n 1)
+  thechosencow=$(for n in $dotfiles/etc/cows/*; do printf '%s\n' "$n"; done | shuf -n 1)
   fortune | cowsay -f $thechosencow | lolcat
 
   print
