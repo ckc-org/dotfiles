@@ -1,6 +1,6 @@
 
 ## install
-
+1. Install XCode and accept license. eg `sudo xcodebuild -license`
 1. Run these commands:
     ```bash
     $ mkdir -p ~/src && cd ~/src
@@ -8,7 +8,7 @@
     $ cd dotfiles 
     $ ./install.sh
     ```
-2. Change `Terminal.app` theme to `terminal/paulmillr.terminal`
+1. Change `Terminal.app` theme to `terminal/paulmillr.terminal`
 
 ## custom cows
 
