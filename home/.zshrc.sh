@@ -91,10 +91,6 @@ git config --global core.excludesfile '~/.gitignore'
 # After modifications, export path for other people to use
 export PATH
 
-# Don't share history between terminal tabs
-unsetopt inc_append_history
-unsetopt share_history
-
 # direnv stuff
 if command -v direnv > /dev/null 2>&1; then
     eval "$(direnv hook zsh)"
